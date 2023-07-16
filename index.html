@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head id="head">
+    <title>My WebSite</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <h1>My WebSite</h1>
+    </div>
+    <br />
+    <div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <br /><br />
+    <main>
+      <div>
+        <h1>Welcome to My Website</h1>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          vitae minus, quaerat provident iste libero soluta ratione ipsa, error
+          nam fuga eius repudiandae et explicabo atque. Debitis aperiam nulla
+          atque. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Veritatis voluptas magnam sapiente neque explicabo porro tempora
+          placeat quos fuga illum. Ullam quaerat placeat a aliquam explicabo
+          voluptatem dolorem esse illo!
+        </p>
+      </div>
+      <button onclick="addcss()" id="button">Toggle css</button>
+    </main>
+    <footer>
+      <div>
+        <p>Copyright<sup>&copy;</sup>2023</p>
+      </div>
+    </footer>
+    <script>
+      let counter = 0;
+      function addcss() {
+        counter++;
+        if (counter % 2 !== 0) {
+          document.getElementById("head").innerHTML =
+            '<title>CSS</title> <link rel="stylesheet" href="styles.css">';
+          document.getElementById("button").innerHTML = "View in HTML";
+        } else {
+          document.getElementById("head").innerHTML = "<title> HTML</title>";
+          document.getElementById("button").innerHTML = "View in css";
+        }
+      }
+    </script>
+  </body>
+</html>
